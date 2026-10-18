@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nuvacline - Temporary file cleaner for Windows</title>
+<meta name="description" content="Nuvacline is a small, portable Windows utility that finds and removes temporary files of the current user. Read-only analysis, manual selection, no network access.">
+<link rel="icon" href="assets/favicon.ico">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <nav aria-label="Main">
+    <a class="brand" href="#top"><img src="assets/logo.png" alt="" width="44" height="15"><span>Nuvacline</span></a>
+    <ul>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#privacy">Privacy</a></li>
+      <li><a href="#screenshots">Screenshot</a></li>
+      <li><a href="#release">Download</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#disclaimer">Disclaimer</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+
+  <section class="hero" id="top">
+    <img class="hero-logo" src="assets/logo.png" alt="Nuvacline logo" width="288" height="96">
+    <h1>Nuvacline</h1>
+    <p class="tagline">A small, portable Windows utility that finds and removes the temporary files of the current user.</p>
+    <p><span class="badge">Early access (alpha) - version 0.5.2</span></p>
+    <p><a class="button" href="download/Nuvacline-0.5.2-Windows.zip" download>Download for Windows (64-bit)</a></p>
+    <p class="meta">ZIP - 99,285 bytes - Windows 10/11 64-bit - no installer - no administrator rights</p>
+  </section>
+
+  <section id="features" class="section">
+    <h2>Features</h2>
+    <ul class="cards">
+      <li class="card">
+        <h3>Read-only analysis</h3>
+        <p>Scans the temporary folder of the current Windows user and lists what it finds. The analysis itself does not modify anything on disk.</p>
+      </li>
+      <li class="card">
+        <h3>You choose what is deleted</h3>
+        <p>Items must be selected manually and cleaning always asks for confirmation. Recent files (last 24 hours) and files that are in use are skipped.</p>
+      </li>
+      <li class="card">
+        <h3>Clear overview</h3>
+        <p>Every item is shown with name, full path, size, last modified date and category before you decide.</p>
+      </li>
+      <li class="card">
+        <h3>Local report</h3>
+        <p>After an analysis or a cleaning, a report is written to <code>%LOCALAPPDATA%\Nuvacline\reports\</code> and stays on your PC.</p>
+      </li>
+      <li class="card">
+        <h3>Portable</h3>
+        <p>Distributed as a ZIP with a single executable. No installation, no background service, no administrator rights required.</p>
+      </li>
+      <li class="card">
+        <h3>Light and dark theme</h3>
+        <p>The interface follows the Windows theme automatically or can be set manually to light or dark.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section id="privacy" class="section">
+    <h2>Privacy</h2>
+    <ul class="plain">
+      <li>Nuvacline does not use the network: no telemetry, no analytics, no ads, no account.</li>
+      <li>It works entirely offline; reports are stored only on your PC in <code>%LOCALAPPDATA%\Nuvacline\</code>.</li>
+      <li>These behaviour are verified by the project's own privacy and security tests included in the automated test suite.</li>
+    </ul>
+  </section>
+
+  <section id="screenshots" class="section">
+    <h2>Screenshot</h2>
+    <figure class="shot">
+      <img src="assets/screenshot-main.png" alt="Nuvacline 0.5.2 main window: header with theme selector, action buttons (Analyze, Clean selected, Cancel, Open report, Select all, Deselect all), status area and an empty results table." width="956" height="659" loading="lazy">
+      <figcaption>The Nuvacline 0.5.2 main window (screenshot of the released build).</figcaption>
+    </figure>
+  </section>
+
+  <section id="release" class="section">
+    <h2>Latest release</h2>
+    <div class="release">
+      <p class="release-line"><strong>Version 0.5.2</strong> - October 17, 2026 - early access (alpha)</p>
+      <h3>What's new in 0.5.2</h3>
+      <ul class="plain">
+        <li>More reliable clipboard copy: if Windows temporarily keeps the clipboard busy, the copy is retried automatically.</li>
+        <li>Version metadata aligned to 0.5.2 across the application and package.</li>
+      </ul>
+      <p><a class="button" href="download/Nuvacline-0.5.2-Windows.zip" download>Download Nuvacline 0.5.2 (ZIP, 99,285 bytes)</a></p>
+      <p class="meta">SHA-256 of the ZIP:<br><code class="hash">C4EB6706666B802F81DE4BF3AAF19748D313977D9684BFCC6577D210CDC9ED1F</code></p>
+      <p class="meta">Inside the ZIP, <code>SHA256SUMS.txt</code> lists the SHA-256 hash of every file. The package contains the executable, LICENSE (GPL-3.0), README, PRIVACY and SECURITY documents.</p>
+    </div>
+  </section>
+
+  <section id="requirements" class="section">
+    <h2>Requirements</h2>
+    <ul class="plain">
+      <li>Windows 10 (build 1903 or later) or Windows 11, 64-bit.</li>
+      <li>.NET Framework 4.8 or later (normally already present on supported Windows versions).</li>
+      <li>No administrator rights, no network connection.</li>
+    </ul>
+  </section>
+
+  <section id="faq" class="section">
+    <h2>FAQ</h2>
+    <details>
+      <summary>How do I install Nuvacline?</summary>
+      <p>Download the ZIP, extract it into any folder and run <code>Nuvacline.exe</code>. There is no installer and nothing is written outside the folder and <code>%LOCALAPPDATA%\Nuvacline\</code>.</p>
+    </details>
+    <details>
+      <summary>How do I uninstall it?</summary>
+      <p>Close the application and delete the folder where you extracted it. If you also want to remove the saved reports, delete <code>%LOCALAPPDATA%\Nuvacline\</code>.</p>
+    </details>
+    <details>
+      <summary>Which files does it clean?</summary>
+      <p>Only temporary files of the current Windows user: the folder returned by the system as the user's temporary directory. It does not clean other accounts or system folders, and it offers no way to add custom paths.</p>
+    </details>
+    <details>
+      <summary>Does the analysis change anything?</summary>
+      <p>No. The analysis is read-only. Files are only deleted after you select them and confirm the cleaning.</p>
+    </details>
+    <details>
+      <summary>Are deleted files recoverable?</summary>
+      <p>No. Deleted files do not go to the Recycle Bin. The cleaning asks for confirmation first; uncheck anything you want to keep before starting.</p>
+    </details>
+    <details>
+      <summary>Does it need internet or administrator rights?</summary>
+      <p>No. Nuvacline works fully offline and runs as a normal user.</p>
+    </details>
+  </section>
+
+  <section id="disclaimer" class="section">
+    <h2>Disclaimer</h2>
+    <p>Nuvacline is provided "as is", without warranty of any kind. The author is not liable for any data loss, Windows problems, or other damage resulting from the use of this software. Use it at your own risk.</p>
+  </section>
+
+  <section id="source" class="section">
+    <h2>Source code and license</h2>
+    <p>Nuvacline is distributed under the <strong>GNU General Public License v3.0</strong>. The full license text is included in the download and is also available <a href="license.txt">here</a>.</p>
+    <p>The source repository is currently private; the application is distributed as a portable package.</p>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Feedback and questions: <a href="https://github.com/DJ-Erik" rel="noopener">github.com/DJ-Erik</a>. There is no public issue tracker at the moment.</p>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>Nuvacline - portable temporary file cleaner for Windows. License: GPL-3.0.</p>
+  <p>This page uses no cookies, no trackers and no external resources.</p>
+  <p>Use Nuvacline at your own risk.</p>
+</footer>
+
+</body>
+</html>
